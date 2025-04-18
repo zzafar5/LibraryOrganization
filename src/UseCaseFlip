@@ -1,0 +1,14 @@
+public class UseCaseFlip {
+
+    public static void main(String[] args) {
+        LibraryOrganization<String> returns = new LibraryOrganization1L<>();
+
+        returns.enqueue("Book A");
+        returns.enqueue("Book B");
+        returns.enqueue("Book C");
+
+        System.out.println("Before flip: " + returns);
+        returns.flip();
+        System.out.println("After flip: " + returns);
+    }
+}

@@ -77,6 +77,29 @@ the following form: YYYY.0M.0D.
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
 
+## 2025.03.24
+
+### Added part 1
+
+- Brainstormed potential components inspired by real-life systems
+- Selected **LibraryOrganization** as the component based on past library experience
+- Defined the core responsibilities: organizing, adding, removing, flipping, and sorting entries
+- Identified data structure backbone: FIFO queue (using OSU components)
+- Created initial `01-component-brainstorming.md` file in `/doc/01-component-brainstorming`
+
+## 2025.04.05
+
+### Added
+
+- Designed and implemented `LibraryOrganizationKernel<T>` interface extending `Standard<T>`
+- Designed enhanced interface `LibraryOrganization<T>` with additional behavior:
+  - `flip()` (not sure if this will stay)
+  - `replaceFront(T x)`
+  - `append(LibraryOrganization<T> q)`
+  - `sort(Comparator<T>)`
+- Included full method contracts using design-by-contract style
+- Saved interface designs in `03-component-interfaces.md`
+
 # part4Changelog
 
 All notable changes to this project will be documented in this file.
@@ -90,9 +113,41 @@ the following form: YYYY.MM.DD.
 ### part 4 Added
 
 - Created abstract class `LibraryOrganizationSecondary` in `src`
-- Implemented all enhanced methods: `flip`, `replaceFront`, `append`, and `sort`
-- Added OSU-compliant versions of `toString()` and `equals(Object obj)` using kernel methods only
+- Implemented  methods: `flip`, `replaceFront`, `append`, and `sort`
+- Added versions of `toString()` and `equals(Object obj)` using kernel methods only
 
 ### part 4 Updated
 
-- Design now includes contract-respecting logic for secondary method behavior
+- Design now includes secondary method behavior
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Calendar Versioning](https://calver.org/) of
+the form: YYYY.MM.DD.
+
+---
+
+## 2025.04.17
+
+### part 5 and 6 Added
+
+- Created `LibraryOrganization1L` class as the kernel implementation
+- Created `LibraryOrganizationSecondary` abstract class with full method overrides
+- Implemented the enhanced interface: `flip()`, `replaceFront()`, `append()`, and `sort()`
+- Wrote JUnit test files:
+  - `LibraryOrganization1LTest.java`
+  - `LibraryOrganizationSecondaryTest.java`
+- Developed use case files:
+  - `UseCaseFlip.java` – demonstrates reversing a queue of books
+  - `UseCaseShelf.java` – demonstrates replacing, appending, and sorting book entries
+  - `UseCaseCheckout.java` – demonstrates checking out books (dequeue + length)
+
+### part 5 and 6 Updated
+
+- Added full Javadoc comments to all methods in `LibraryOrganization1L` and `LibraryOrganizationSecondary`
+- Connected class hierarchy properly using `implements` and `extends`
+- Polished `toString()` and `equals()` to align with OSU component conventions
+- Cleaned up project structure and naming to match required portfolio formatting
