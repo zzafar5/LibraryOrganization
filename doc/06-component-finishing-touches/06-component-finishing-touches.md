@@ -141,8 +141,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 Your primary task for this assignment is to polish up your code and get it
@@ -306,19 +304,17 @@ Take some time to fill them out honestly.
 > in class fails to map to the real world. Now that you've had a chance to
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
-
-<!-- TODO: discuss -->
+ After completing the portfolio project, I actually feel like I understand software development a lot better. It made me realize that most real-world software isn’t just about writing code — it’s about designing systems that other people can use, test, and extend.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
-
-<!-- TODO: discuss -->
+Having to build everything from scratch, including the interfaces, abstract class, and kernel made me realize I needed a deeper understanding of design-by-contract and how to properly plan methods before coding.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I really used to focus more on getting things to work — now I care a lot more about how the code is organized and how someone else would use it.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,25 +322,25 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Through this project, I definitely picked up a lot of technical skills like writing JUnit tests without relying on a reference implementation. I also completed most of this project very last minute so I think it taught me how to work under pressure.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+I think so I thinkt the work of applying design by contracts could be applied and I could bullet it something like applied design-by-contract principles to define clear preconditions, postconditions, and parameter modes for all public methods
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I didn’t realize how much I would enjoy building something that felt practical and reusable, like a component that could fit into a larger system
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue on my career path toward project management, I want to build more experience working on team-based projects where I can take initiative in organizing tasks, setting deadlines, and communicating clearly with others.I’m also interested in connecting with alumni or upperclassmen who’ve interned as product managers or technical project leads, since they can offer more insight into that career path and how to break into it.
 
 ### Changelog
 

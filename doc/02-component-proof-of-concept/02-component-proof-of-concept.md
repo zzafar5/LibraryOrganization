@@ -1,8 +1,9 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+w **Namee*:Zaneb Zafar
+
+- *Dot number: zafar.43
+- **Due Date**: 2/20/25
 
 ## Assignment Overview
 
@@ -53,7 +54,9 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
+I decided to move forward with the Library Organizer design. I picked this one because it connects to my experience working at a library and a small book project I did in the past. It also feels like a good fit for the semester because it’s simple but still useful. The methods like adding, removing, and flipping books made sense to me and felt like something I could actually build without getting overwhelmed.
+
+I thought about doing the Spotify Playlist idea since I love music, but I wasn’t sure how to make it different enough from just a regular sequence. The Browser History Tracker seemed cool too, but it felt a little harder to connect to the Stack component. So for now, I’m going to start with the Library Organizer and make a new branch called proof-of-concept to begin working on it. I might change things later, but this feels like a good place to start.
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,8 +70,6 @@ project. Specifically, students should be able to:
 3. Assemble a minimal working implementation of one of their designs
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -114,10 +115,7 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
-
-> Once you've argued your choice of design, make a branch in your new repo called
+> Once yow've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
 > preference is to use GitHub Desktop. From there, you can click the `Branch`
 > tab, select `New branch`, and name your new branch. Alternatively, VSCode has
@@ -125,10 +123,6 @@ new; then delete this comment -->
 > VSCode to run git commands. It's entirely up to you. Regardless of your choice,
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
-
-<!-- TODO: make a new branch from main then delete this comment -->
-
-## Assignment Tasks
 
 As stated previously, your goal with this assignment is to produce a Java
 file that proves the possibility of your design. There are many ways to do this,
