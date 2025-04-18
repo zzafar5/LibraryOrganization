@@ -16,6 +16,7 @@ public interface LibraryOrganization<T> extends LibraryOrganizationKernel<T> {
      * @updates this
      * @ensures this = reverse(#this)
      */
+    // this flip method I use here but I barely really touched it after
     void flip();
 
     /**
@@ -29,6 +30,7 @@ public interface LibraryOrganization<T> extends LibraryOrganizationKernel<T> {
      * @requires this ≠ <> and x ≠ null
      * @ensures this = <x> * #this[1, |#this| - 1] and replaceFront = #this[0]
      */
+    // replace the front book.
     T replaceFront(T x);
 
     /**
@@ -41,6 +43,7 @@ public interface LibraryOrganization<T> extends LibraryOrganizationKernel<T> {
      * @requires q ≠ null
      * @ensures this = #this * #q and q = <>
      */
+// appends books from the library organization to the end of the list
     void append(LibraryOrganization<T> q);
 
     /**
@@ -52,5 +55,6 @@ public interface LibraryOrganization<T> extends LibraryOrganizationKernel<T> {
      * @requires comparator ≠ null
      * @ensures this is sorted according to comparator
      */
+    // sort the books in order of first letter
     void sort(Comparator<T> comparator);
 }
