@@ -182,68 +182,92 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methodsdf
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+Component Design #1: LibraryOrganization
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- **Description**:
+    This component models the organization of books in a library. It supports storing, managing, and reordering books, such as adding new books, removing old ones, and sorting them. The goal is to simulate a basic book management system using Queue-like behavior.
+- **Kernel Methods**:
+    void enqueue(T x) – adds a book to the end of the library collection
+    T dequeue() – removes and returns the book at the front of the collection
+    int length() – reports the total number of books in the library
+- **Secondary Methods**:
+  - void flip() – reverses the order of books (e.g., from old-to-new to new-to-old)
+
+    T replaceFront(T x) – replaces the front book with a new one and returns the original
+
+     void append(Queue<T> q) – appends another set of books to the end of the collection
+
+   void sort(Comparator<T> comp) – sorts the library books using a given ordering
+
+- **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+  - Would this component be mutable? Answer and explain:
+      Yes, because books are constantly added and removed. The state of the component changes as books are enqueued or dequeued.
+  - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      Yes, since this component depends on Queue behavior, it might rely on internal queue-related classes, depending on the implementation.
+  - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      I don’t know.
+  - Can you implement your secondary methods using your kernel methodsdf
+      Answer, explain, and give at least one example:
+    - Yes. For example, flip() could be implemented by repeatedly dequeuing from the original queue and pushing onto a temporary queue in reverse order, which uses dequeue() and enqueue()
+
+- Component Design #2: SpotifyPlaylistOrganizer
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    This component models a playlist system similar to Spotify. It allows users to add, remove, and reorder songs in a playlist using Sequence behavior. Users can view playlist contents, extract sub-sequences, and flip the order of songs.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    void add(int pos, T x) – adds a song at position pos
+    int length() – reports how many songs are in the playlist
+    T remove(int pos) – removes and returns the song at position pos
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void flip() – reverses the playlist
+  void extract(int pos1, int pos2, Sequence<T> s) – inserts a sequence of songs into the playlist between two positions
+    T  entry(int pos) – reports the song at the specified position
+
+- **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+  - Would this component be mutable? Answer and explain:
+    -Yes, because songs are added, removed, and reordered frequently, modifying the playlist each time.
+  - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+    I don’t know. Possibly, if implemented using the Sequence family.
+  - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+    - I don’t know.
+  - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+    - Yes. For example, extract() could be implemented using repeated add() calls from the kernel to insert each element of the new sequence into the original one.
+
+- Component Design #3: BrowserHistoryTracker
+  - **Description**:
+    The purpose of this component is to model a web browser’s history using a structure that tracks recently visited web pages. The last page visited is placed on the top, and the user can access, remove, or modify the most recent entries as needed.
+  - **Kernel Methods**:
+    - void push(T x) – adds a new page to the top of the history
+
+    T pop() – removes and returns the most recent page
+
+    int length() – reports the number of pages in the history
+
+  - **Secondary Methods**:
+    - void flip() – reverses the order of the browser history
+
+    T replaceTop(T x) – replaces the most recent page with a new one and returns the old page
+
+     T top() – reports the current most recently visited page without removing it
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes, this component would be mutable because pages are constantly added and removed as the user browses, updating the history in real time.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don’t know if it would rely on any internal classes, but since it uses stack-like behavior, it may internally use a Stack family implementation.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don’t know if this component would need any constants, though perhaps a constant could be used to represent a default homepage or empty value.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
-
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, replaceTop(T x) could be implemented by calling pop() to remove the top page and then push(x) to add the new page in its place.
 
 ## Post-Assignment
 

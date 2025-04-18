@@ -304,17 +304,18 @@ Take some time to fill them out honestly.
 > in class fails to map to the real world. Now that you've had a chance to
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
- After completing the portfolio project, I actually feel like I understand software development a lot better. It made me realize that most real-world software isn’t just about writing code — it’s about designing systems that other people can use, test, and extend.
+
+ After completing the portfolio project, I actually feel like I understand software development a lot better. It made me realize that most real-world software isn’t just about writing code — it’s about designing systems that other people can use, test, and use themselves.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
-Having to build everything from scratch, including the interfaces, abstract class, and kernel made me realize I needed a deeper understanding of design-by-contract and how to properly plan methods before coding.
+Having to build everything from scratch, including the interfaces, abstract class, and kernel made me realize I needed a deeper understanding of design-by-contract and how to properly plan methods before coding instead of just following instructions, here I had no instructions.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-I really used to focus more on getting things to work — now I care a lot more about how the code is organized and how someone else would use it.
+I really used to focus more on getting things to work — now I care a lot more about how the code is organized and how someone else would use it. I also think I didn't realize how much patience you need to have in this process for instance when testing a method doesn't work I realized how much time it can take to brainstorm a solution to what to fix within the method to get it to pass the test, but I also realized thinking in a way of just I just need to pass this test is negative because your thinking what's easiest to be done not what makes the code better.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -322,7 +323,7 @@ I really used to focus more on getting things to work — now I care a lot more 
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-Through this project, I definitely picked up a lot of technical skills like writing JUnit tests without relying on a reference implementation. I also completed most of this project very last minute so I think it taught me how to work under pressure.
+Through this project, I definitely picked up a lot of technical skills like writing JUnit tests without relying on a reference implementation. I also completed most of this project last minute (semester got stressful) so I think it taught me how to work in a time crunch while maintaining good work.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
@@ -340,7 +341,7 @@ I didn’t realize how much I would enjoy building something that felt practical
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-To continue on my career path toward project management, I want to build more experience working on team-based projects where I can take initiative in organizing tasks, setting deadlines, and communicating clearly with others.I’m also interested in connecting with alumni or upperclassmen who’ve interned as product managers or technical project leads, since they can offer more insight into that career path and how to break into it.
+To continue on my career path toward project management, I want to build more experience working on team-based projects where I can take initiative in organizing tasks, setting deadlines, and communicating with others. I think software 2 working with my partner, Jane, I was able to work with someone in different ways such as brainstorming but also we worked on code together and it allowed me to see how someone else codes. I’m also interested in connecting with alumni or upperclassmen who’ve interned within my field ( I switched to Industrial and Systems Engineering while in this class) or some type of technical project leads, since they can offer more insight into that career path and how to break into it.
 
 ### Changelog
 
