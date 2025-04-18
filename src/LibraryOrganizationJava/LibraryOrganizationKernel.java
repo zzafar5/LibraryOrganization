@@ -1,3 +1,5 @@
+package LibraryOrganizationJava;
+
 import components.standard.Standard;
 
 /**
@@ -39,3 +41,11 @@ public interface LibraryOrganizationKernel<T>
      */
     int length();
 }
+
+/**
+ * Reports the front entry in this LibraryOrganization.
+ *
+ * @return the front entry
+ * @requires this ≠ <>
+ * @ensures front = #this[0]
+ */

@@ -1,10 +1,23 @@
+package LibraryOrganizationJava;
+
 import java.util.Comparator;
 
+/**
+ * Secondary (abstract) implementation of LibraryOrganization. Implements
+ * enhanced interface methods using kernel operations.
+ *
+ * @param <T>
+ *            the type of elements stored in this LibraryOrganization
+ */
+public abstract class LibraryOrganizationSecondary<T>
+        implements LibraryOrganization<T> {
 
-public abstract class LibraryOrganizationSecondary<T> {
-    //  Implement each method from your enhanced interface
-    //    (using only kernel + standard methods)
-
+    /**
+     * Reverses the order of the entries in this LibraryOrganization.
+     *
+     * @updates this
+     * @ensures this = reverse(#this)
+     */
     @Override
     public void flip() {
         if (this.length() > 0) {
@@ -14,6 +27,17 @@ public abstract class LibraryOrganizationSecondary<T> {
         }
     }
 
+    /**
+     * Replaces the front entry with a new one and returns the original front
+     * entry.
+     *
+     * @param x
+     *            the new entry to place at the front
+     * @return the original front entry
+     * @updates this
+     * @requires this ≠ <> and x ≠ null
+     * @ensures this = <x> * #this[1, |#this| - 1] and replaceFront = #this[0]
+     */
     @Override
     public T replaceFront(T x) {
         T old = this.dequeue();
@@ -21,6 +45,16 @@ public abstract class LibraryOrganizationSecondary<T> {
         return old;
     }
 
+    /**
+     * Appends all entries from the given LibraryOrganization to the end of this
+     * one.
+     *
+     * @param q
+     *            the LibraryOrganization to append from
+     * @updates this, q
+     * @requires q ≠ null
+     * @ensures this = #this * #q and q = <>
+     */
     @Override
     public void append(LibraryOrganization<T> q) {
         while (q.length() > 0) {
@@ -28,6 +62,15 @@ public abstract class LibraryOrganizationSecondary<T> {
         }
     }
 
+    /**
+     * Sorts the entries in this LibraryOrganization using the given comparator.
+     *
+     * @param comp
+     *            the comparator used to determine sort order
+     * @updates this
+     * @requires comp ≠ null
+     * @ensures this is sorted according to comp
+     */
     @Override
     public void sort(Comparator<T> comp) {
         int size = this.length();
@@ -46,6 +89,12 @@ public abstract class LibraryOrganizationSecondary<T> {
         }
     }
 
+    /**
+     * Returns a comma-separated string of the entries in this
+     * LibraryOrganization.
+     *
+     * @return a string representation of the entries
+     */
     @Override
     public String toString() {
         String result = "";
@@ -68,6 +117,14 @@ public abstract class LibraryOrganizationSecondary<T> {
         return result;
     }
 
+    /**
+     * Compares this LibraryOrganization to another for equality.
+     *
+     * @param obj
+     *            the object to compare
+     * @return true if both contain the same entries in the same order, false
+     *         otherwise
+     */
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof LibraryOrganization)) {
@@ -116,6 +173,4 @@ public abstract class LibraryOrganizationSecondary<T> {
 
         return true;
     }
-}
-
 }

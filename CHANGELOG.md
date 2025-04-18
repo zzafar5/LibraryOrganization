@@ -4,30 +4,150 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
+the following form: YYYY.0M.0D.
+
+## [Unreleased]
+
+## [2024.12.30]
+
+- Added table-based rubrics to all 6 parts of the project
+- Updated gitignore to exclude more files
+- Fixed image markdown in the interfaces document
+
+## [2024.08.07]
+
+### Added
+
+- Added `/bin` to `.gitignore`, so binaries are no longer committed
+- Added the TODO tree extensions to `extensions.json`
+- Added the `todo-tree.general.showActivityBarBadge` setting to `settings.json`
+- Added the `todo-tree.tree.showCountsInTree` setting to `settings.json`
+- Added the VSCode PDF extension to `extensions.json`
+- Added `java.debug.settings.vmArgs` setting to enable assertions (i.e., `-ea`)
+- Added information about making branches to all parts of the project
+- Added information about how to update the CHANGELOG to every part of the
+  project
+- Added information about how to make a pull request to every part of the
+  project
+
+### Changed
+
+- Updated `settings.json` to format document on save using `editor.formatOnSave`
+  setting
+- Updated `settings.json` to exclude certain files from markdown to PDF
+  generation using `markdown-pdf.convertOnSaveExclude` setting
+- Updated `settings.json` to use latest `java.cleanup.actions` setting
+- Updated `settings.json` to automatically choose line endings using `files.eol`
+  setting
+- Updated `settings.json` to organize imports automatically on save using the
+  `editor.codeActionsOnSave` and `source.organizeImports` settings
+- Changed the component brainstorming assignment to ask a few clarifying
+  questions
+- Changed the component brainstorming example from `Point3D` to `NaturalNumber`
+  to avoid the getter/setter trend
+- Updated assignment feedback sections to include a link to a survey that
+  I'll actually review
+- Updated README to include step about using template repo
+- Updated part 3 rubric to include a hierarchy diagram
+- Updated part 6 rubric to account for overall polish
+
+### Fixed
+
+- Fixed issue where checkstyle paths would not work on MacOS
+
+### Removed
+
+- Removed `java.saveActions.organizeImports` setting from `settings.json`
+- Removed references to `Point3D` completely
+
+## [2024.01.07]
+
+### Added
+
+- Added a list of extensions to capture the ideal student experience
+- Added PDFs to the `.gitignore`
+- Added the OSU checkstyle config file
+- Added the OSU formatter config file
+- Added a `settings.json` file to customize the student experience
+- Created a README at the root to explain how to use the template repo
+- Created initial drafts of the six portfolio assessments
+- Added READMEs to key folders like `test` and `lib` to explain their purpose
+
+[unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
+[2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
+[2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
+
+## 2025.03.24
+
+### Added part 1
+
+- Brainstormed potential components inspired by real-life systems
+- Selected **LibraryOrganization** as the component based on past library experience
+- Defined the core responsibilities: organizing, adding, removing, flipping, and sorting entries
+- Identified data structure backbone: FIFO queue (using OSU components)
+- Created initial `01-component-brainstorming.md` file in `/doc/01-component-brainstorming`
+
+## 2025.04.05
+
+### Added
+
+- Designed and implemented `LibraryOrganizationKernel<T>` interface extending `Standard<T>`
+- Designed enhanced interface `LibraryOrganization<T>` with additional behavior:
+  - `flip()` (not sure if this will stay)
+  - `replaceFront(T x)`
+  - `append(LibraryOrganization<T> q)`
+  - `sort(Comparator<T>)`
+- Included full method contracts using design-by-contract style
+- Saved interface designs in `03-component-interfaces.md`
+
+# part4Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.MM.DD.
 
 ## 2025.04.16
 
-### part 1 Added
+### part 4 Added
 
-- Created `LibraryOrganizationKernel.java` interface with kernel methods: `enqueue`, `dequeue`, and `length`
-- Created `LibraryOrganization.java` enhanced interface with methods: `flip`, `replaceFront`, `append`, and `sort`
+- Created abstract class `LibraryOrganizationSecondary` in `src`
+- Implemented  methods: `flip`, `replaceFront`, `append`, and `sort`
+- Added versions of `toString()` and `equals(Object obj)` using kernel methods only
 
-### part 1 Updated
+### part 4 Updated
 
-- Finalized interface design based on previous feedback
-- Integrated method contracts following OSU discipline
+- Design now includes secondary method behavior
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Calendar Versioning](https://calver.org/) of
+the form: YYYY.MM.DD.
 
 ---
 
-## 2025.01.21
+## 2025.04.17
 
-### part 3 Add
+### part 5 and 6 Added
 
-- Designed component ideas: LibraryOrganization, Spotify Playlist Organizer, Browser History Tracker
-- Outlined kernel and secondary methods for each
-- Selected `LibraryOrganization` as the project to move forward with
+- Created `LibraryOrganization1L` class as the kernel implementation
+- Created `LibraryOrganizationSecondary` abstract class with full method overrides
+- Implemented the enhanced interface: `flip()`, `replaceFront()`, `append()`, and `sort()`
+- Wrote JUnit test files:
+  - `LibraryOrganization1LTest.java`
+  - `LibraryOrganizationSecondaryTest.java`
+- Developed use case files:
+  - `UseCaseFlip.java` – demonstrates reversing a queue of books
+  - `UseCaseShelf.java` – demonstrates replacing, appending, and sorting book entries
+  - `UseCaseCheckout.java` – demonstrates checking out books (dequeue + length)
 
-### part 3 Updated
+### part 5 and 6 Updated
 
-- Linked values and career goals to component selection (e.g. library job + interest in reading)
+- Added full Javadoc comments to all methods in `LibraryOrganization1L` and `LibraryOrganizationSecondary`
+- Connected class hierarchy properly using `implements` and `extends`
+- Polished `toString()` and `equals()` to align with OSU component conventions
+- Cleaned up project structure and naming to match required portfolio formatting

@@ -1,0 +1,32 @@
+public class UseCaseCheckout {
+
+    public static void main(String[] args) {
+        LibraryOrganization<String> checkoutLine = new LibraryOrganization1L<>();
+
+        // Add books that students want to check out
+        checkoutLine.enqueue("Harry Potter");
+        checkoutLine.enqueue("1984");
+        checkoutLine.enqueue("To Kill a Mockingbird");
+
+        System.out.println("Checkout line: " + checkoutLine);
+        System.out.println("Books waiting: " + checkoutLine.length());
+
+        // Serve the first book (FIFO first in first out)
+        String book1 = checkoutLine.dequeue();
+        System.out.println("Checked out: " + book1);
+        System.out.println("Remaining: " + checkoutLine);
+
+        // serve next book in line
+        String book2 = checkoutLine.dequeue();
+        System.out.println("Checked out: " + book2);
+        System.out.println("Remaining: " + checkoutLine);
+
+        // third book
+        String book3 = checkoutLine.dequeue();
+        System.out.println("Checked out: " + book3);
+        System.out.println("Remaining: " + checkoutLine);
+
+        // Check if the line is empty or if there is another book
+        System.out.println("Books left in queue: " + checkoutLine.length());
+    }
+}
