@@ -149,5 +149,7 @@ the form: YYYY.MM.DD.
 
 - Added full Javadoc comments to all methods in `LibraryOrganization1L` and `LibraryOrganizationSecondary`
 - Connected class hierarchy properly using `implements` and `extends`
-- Polished `toString()` and `equals()` to align with OSU component conventions
+- Changed up `toString()` and `equals()` to align with OSU component
 - Cleaned up project structure and naming to match required portfolio formatting
+- answered the reflection questions
+- Completed test cases + sample use cases
